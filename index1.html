@@ -1,0 +1,82 @@
+<html>
+
+    <head>
+
+        <title>
+            Summary Generator
+        </title>
+
+        <link rel="stylesheet" href="static/style1.css">
+
+       <script>
+           
+            function onFileLoad(elementId, event) {
+                document.getElementById(elementId).innerText = event.target.result;
+            }
+
+            function onChooseFile(event, onLoadFileHandler) {
+    
+                if (typeof window.FileReader !== 'function')
+                    throw ("The file API isn't supported on this browser.");
+                    let input = event.target;
+                
+                if (!input)
+                    throw ("The browser does not properly implement the event object");
+    
+                if (!input.files)
+                    throw ("This browser does not support the `files` property of the file input.");
+                
+                if (!input.files[0])
+                    return undefined;
+    
+                let file = input.files[0];
+                let fr = new FileReader();
+                fr.onload = onLoadFileHandler;
+                fr.readAsText(file);
+            }
+
+       </script>
+
+
+
+    </head>
+
+    <body>
+
+        
+                <a href="/">
+                    <img id="logo" src="static/logo3.png" />
+                </a>
+            
+
+        <h1 class="title">
+            TEXT SUMMARIZER
+        </h1>
+        
+        <div class="formClass">
+
+            <form id="form1" method="POST" accept-charset="UTF-8" onsubmit=validate()>
+
+                <div id="textAbout">This text is about(Enter Keywords or Title) <input name="textAbout" required="required" type="text">.</div>
+
+                <div id="linesCount">Summarize my text in <input name="lineCount" placeholder="0-n" required="required" type="tel"> sentences.</div>
+
+                <div id="textArea">
+                    <textarea name="textInput" required="required" placeholder="Enter text here" id="textInput"></textarea>
+                </div>
+				
+                
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i>
+                </label>
+				<input id="upload" type="file" onchange='onChooseFile(event, onFileLoad.bind(this, "textInput"))' />
+                <br><br><input id="submit" type="submit" value="SUMMARIZE" /></br></br>
+
+            </form>
+
+
+        </div>
+
+    </body>
+
+</html>

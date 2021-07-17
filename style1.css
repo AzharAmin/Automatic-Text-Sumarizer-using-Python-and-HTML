@@ -1,0 +1,124 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(1.png);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo{
+    float: center;
+    width: 150px;
+    height:auto;
+}
+
+.title{
+
+    color: rgb(158, 158, 158);
+    font-size: 80px;
+    font-family: Century Gothic;
+
+    display: table;
+    margin: 0 auto;
+}
+
+.formClass{
+
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+
+#form1{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#textAbout{
+    padding: 5px;
+    color: rgb(128, 93, 173);
+    font-size: 22px;
+    font-family: Century Gothic;
+}
+
+#textAbout input{
+    height: 30px;
+    width: 200px;
+    position: relative;
+    border: 2px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .14);
+    background-color: AliceBlue;
+    font-size: 14px;
+    
+}
+
+#linesCount{
+    padding: 5px;
+    color: rgb(106, 223, 203);
+    font-size: 22px;
+    font-family: Century Gothic;
+}
+
+#linesCount input{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border: 2px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .14);
+    background-color: AliceBlue;
+    font-size: 14px;   
+}
+
+#textArea{
+    padding: 20px;
+}
+
+#textInput{
+    height:300px;
+    width:600px;
+
+    color:#999;
+    font-weight:400;
+    font-size:15px;
+    font-family:'Ubuntu', Helvetica, Arial, sans-serif;
+
+    background:#fff;
+    
+    line-height:2em;
+    border:none;
+    box-shadow:0px 0px 5px 1px rgba(0,0,0,0.1);
+    padding:30px;
+
+    -webkit-transition: height 2s ease;
+    -moz-transition: height 2s ease;
+    -ms-transition: height 2s ease;
+    -o-transition: height 2s ease;
+    transition: height 2s ease; 
+}
+#upload{
+    color: rgba(255,255,255, 0.815);
+    /*padding: 0px 50px;*/
+	padding-left: 58px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    height: 50px;
+    width: 280px;
+}
+
+#upload:hover{
+    background-color: #fff;
+    color: rgb(5,27,242);
+}
+#submit{
+    color: rgba(7, 20, 145, 0.815);
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    height: 50px;
+    width: 160px;
+}
+
+#submit:hover{
+    background-color: #fff;
+    color: rgb(0,0,0);
+}
